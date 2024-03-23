@@ -32,16 +32,16 @@ void RegisterPictures(SDLppRenderer& renderer, SpriteManager& spriteManager, std
 
 int main(int argc, char* argv[])
 {
-	/*try
-	{*/
-		/*SDLpp sdl;
+	try
+	{
+		SDLpp sdl;
 		SDLppTTF ttfInit;
 		SDLppFont fontFirstScreen("resources/coolvetica.ttf", 25);
-		SDLppFont font("resources/coolvetica.ttf", 48);*/
+		SDLppFont font("resources/coolvetica.ttf", 48);
 		SDLppWindow window("Ma super fenêtre", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 1280, 720);
 		SDLppRenderer renderer = window.CreateRenderer(SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
 		
-		/*RenderFirstScreen(fontFirstScreen, renderer);
+		RenderFirstScreen(fontFirstScreen, renderer);
 
 		SpriteManager spriteManager;
 		RegisterGashamons(renderer, spriteManager);
@@ -59,17 +59,17 @@ int main(int argc, char* argv[])
 		FightScene fightScene(picturesManager);
 
 		SceneManager sceneManager(fightScene, gashadexScene, projetS1Scene, gashineScene);
-		sceneManager.SwapScene(sdl, gashadex, font, renderer);*/
+		sceneManager.SwapScene(sdl, gashadex, font, renderer);
 
-		//WINPAUSE;
-		/*return 0;*/
-	/*}*/
-	/*catch (const std::exception& e)
+		WINPAUSE;
+		return 0;
+	}
+	catch (const std::exception& e)
 	{
 		std::cerr << e.what() << std::endl;
 		return EXIT_FAILURE;
-	}*/
-		SDL_Delay(2000);
+	}
+	SDL_Delay(2000);
 }
 
 void RegisterPictures(SDLppRenderer& renderer, SpriteManager& spriteManager, std::shared_ptr<SDLppTexture>& texture, std::string name) {
